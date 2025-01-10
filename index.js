@@ -119,7 +119,7 @@ async function start() {
   // Run the background job every 2 hours
   cron.schedule('0 */2 * * *', fetchCryptoData);
 
-  const PORT = process.env.PORT || 3000;
+  const PORT = process.env.PORT;
   app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
   });
